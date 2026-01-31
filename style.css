@@ -1,0 +1,82 @@
+:root {
+    --primary: #0077b6;
+    --secondary: #2d6a4f;
+    --light: #f4f7fb;
+    --white: #ffffff;
+}
+
+body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--light); margin: 0; padding: 0; }
+
+/* Header & Nav */
+header { background: var(--primary); color: white; padding: 30px; text-align: center; }
+nav { background: #fff; padding: 15px; display: flex; justify-content: center; gap: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+nav a, nav button { text-decoration: none; color: var(--primary); font-weight: bold; cursor: pointer; border: none; background: none; font-size: 16px; }
+
+/* Container & Cards */
+.container { max-width: 800px; margin: 30px auto; padding: 20px; }
+.card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; }
+
+/* Form Fix: Input box size ko control karne ke liye */
+.form-group { max-width: 400px; margin: 0 auto 15px auto; text-align: left; }
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    display: block;
+    box-sizing: border-box; /* Padding box se bahar nahi jayegi */
+}
+
+/* Tracking Bar - Professional Look */
+.progress-bg { background: #e9ecef; border-radius: 50px; height: 20px; width: 100%; margin: 20px 0; overflow: hidden; }
+.progress-fill { 
+    background: linear-gradient(90deg, #0077b6, #00b4d8); 
+    height: 100%; 
+    width: 0%; 
+    transition: width 0.8s ease-in-out; 
+}
+
+/* Buttons */
+button { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 15px; }
+button:hover { background: #005f8d; }
+.btn-logout { background: #d00000 !important; color: white !important; padding: 8px 15px !important; border-radius: 4px !important; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+th { background: #f8f9fa; color: var(--primary); }
+/* Smooth Animations */
+* { transition: all 0.3s ease; }
+
+/* Dashboard Cards Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Table styling update */
+table tr:hover { background-color: #f1f7ff; }
+
+/* Responsive Table for Mobile */
+@media screen and (max-width: 600px) {
+    .container { padding: 10px; }
+    table { font-size: 12px; }
+    th, td { padding: 8px; }
+    nav { flex-direction: column; align-items: center; }
+}
+
+/* Aesthetic Bar Chart Labels */
+.bar-label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 40px;
+}

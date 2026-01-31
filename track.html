@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Status - JalSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initTracking()">
+    <header><h1>Track Your Water Tanker</h1></header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2 id="trackID" style="color: var(--primary); margin-bottom: 10px;">--</h2>
+            <hr>
+            <div style="margin: 20px 0;">
+                <p><strong>Current Status:</strong> <span id="trackStatus" style="font-weight: bold; color: var(--secondary);">--</span></p>
+                <p><strong>Assigned Tanker:</strong> <span id="tankerInfo">--</span></p>
+                <p><strong>Estimated Arrival:</strong> <span id="estTime">--</span></p>
+                <p><small>Last Updated: <span id="lastUpdated">--</span></small></p>
+            </div>
+            
+            <div class="progress-bg">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: #666; font-weight: bold;">
+                <span>Pending</span>
+                <span>Accepted</span>
+                <span>On the Way</span>
+                <span>Delivered</span>
+            </div>
+        </div>
+
+        <div id="feedbackBox" class="card" style="display: none; background: #fff9db; border: 1px dashed #fbc02d; text-align: center;">
+            <h4>Rate Our Service</h4>
+            <p>Aapka tanker deliver ho gaya hai. Hume feedback dein:</p>
+            <select id="rating" style="width: auto; display: inline-block;">
+                <option>⭐⭐⭐⭐⭐ (Excellent)</option>
+                <option>⭐⭐⭐⭐ (Good)</option>
+                <option>⭐⭐⭐ (Average)</option>
+                <option>⭐⭐ (Poor)</option>
+            </select>
+            <button onclick="alert('Thank you for your valuable feedback!')" style="margin-left: 10px;">Submit</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="footer">
+    <p>Developed by <strong>Aastha Yadav</strong> | JalSetu Project</p>
+</footer>
+
+</body>
+</html>

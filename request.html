@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Request Tanker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Request Water Tanker</h1></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="track.html">Track Tanker</a>
+    </nav>
+    <div class="container">
+        <div class="card" style="text-align: center;">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="custName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Area</label>
+                    <select id="custArea">
+                        <option value="Mira Road East">Mira Road East</option>
+                        <option value="Mira Road West">Mira Road West</option>
+                        <option value="Bhayander">Bhayander</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Quantity (Litres)</label>
+                    <input type="number" id="custQty" placeholder="e.g. 1000" required>
+                </div>
+                <button type="submit">Submit Request</button>
+            </form>
+            <br><a href="index.html">← Back to Home</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+    <p>Developed by <strong>Aastha Yadav</strong> | JalSetu Project</p>
+</footer>
+
+</body>
+</html>

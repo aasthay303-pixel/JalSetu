@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin Dashboard - JalSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderAdmin()">
+    <header><h1>Admin Dashboard</h1></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <button onclick="logout()" style="background:red; color:white; border:none; padding:5px 10px; cursor:pointer; margin-left:20px;">Logout</button>
+    </nav>
+
+    <div class="container">
+        <div class="card" style="display: flex; justify-content: space-around; background: #eef4f8; text-align: center; margin-bottom: 20px;">
+            <div><h4>Total Orders</h4><p id="statTotal" style="font-size:20px; font-weight:bold;">0</p></div>
+            <div><h4>Water Delivered</h4><p id="statWater" style="font-size:20px; font-weight:bold;">0 L</p></div>
+            <div><h4>Active Tankers</h4><p id="statActive" style="font-size:20px; font-weight:bold;">0</p></div>
+        </div>
+
+        <div class="card">
+    <h3 style="text-align: center;">Area-wise Demand Insights (SDG 11)</h3>
+    <div style="display: flex; align-items: flex-end; justify-content: space-around; height: 200px; padding: 20px; border-bottom: 2px solid #ccc; background: #fdfdfd; border-radius: 10px;">
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 50px;">
+            <div id="barEast" style="background: #0077b6; width: 100%; height: 5px; transition: height 1s; border-radius: 5px 5px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 5px;"></div>
+            <small style="margin-top:5px; font-weight: bold;">Mira East</small>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; width: 50px;">
+            <div id="barWest" style="background: #00b4d8; width: 100%; height: 5px; transition: height 1s; border-radius: 5px 5px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 5px;"></div>
+            <small style="margin-top:5px; font-weight: bold;">Mira West</small>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; width: 50px;">
+            <div id="barBhayander" style="background: #2d6a4f; width: 100%; height: 5px; transition: height 1s; border-radius: 5px 5px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 5px;"></div>
+            <small style="margin-top:5px; font-weight: bold;">Bhayander</small>
+        </div>
+    </div>
+</div>
+
+        <div class="card" style="padding: 0; overflow: hidden; margin-top: 20px;">
+            <table width="100%" style="border-collapse: collapse; text-align: center;">
+                <thead>
+                    <tr style="background: #0077b6; color: white;">
+                        <th style="padding: 12px;">ID</th><th>Name</th><th>Area</th><th>Qty</th><th>Tanker</th><th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+    <p>Developed by <strong>Aastha Yadav</strong> | JalSetu Project</p>
+</footer>
+
+</body>
+</html>
