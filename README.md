@@ -80,6 +80,9 @@ JalSetu
 Engineering Student  
 Academic Mini Project – Sustainable Digital Supply Chains & Smart Logistics
 
+
+Live Linl: https://aasthay303-pixel.github.io/JalSetu/
+
 ---
 
 ## 📜 License
